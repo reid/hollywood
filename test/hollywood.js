@@ -69,7 +69,7 @@ vows.describe("Hollywood").addBatch({
                         assert.isUndefined(app.__test_plugged);
                     }
                 }
-            },
+            }
         },
         "and another mock plugin": {
             topic: function () {
@@ -134,6 +134,19 @@ vows.describe("Hollywood").addBatch({
                         done();
                     }
                 };
+            },
+            "when it is added": {
+                topic: function (mockPlugin, app) {
+                    var vow = this;
+                    app.once("plugin:anonymous:error", function (err) {
+                        vow.callback(null, err);
+                    });
+                    app.plug(mockPlugin);
+                },
+                "the callback gets an error": function (err) {
+                    assert.ok(err instanceof Error, "Error expected.");
+                    assert.include(err.message, "Name property required");
+                }
             },
             "when it is added (callback-on-complete)": {
                 topic: function (mockPlugin, app) {
