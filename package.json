@@ -1,0 +1,23 @@
+{
+  "author": "Reid Burke <me@reidburke.com> (http://reidburke.com/)",
+  "name": "hollywood",
+  "description": "Make applications from plugins.",
+  "version": "0.0.1pre",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/reid/hollywood.git"
+  },
+  "scripts": {
+    "test": "vows test/*.js"
+  },
+  "engines": {
+    "node": ">= 0.4.12"
+  },
+  "dependencies": {
+    "eventemitter2": "0.4.1"
+  },
+  "devDependencies": {
+    "vows": "~0.6.0",
+    "jslint": "~0.1.0"
+  }
+}
