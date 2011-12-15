@@ -2,7 +2,7 @@
   "author": "Reid Burke <me@reidburke.com> (http://reidburke.com/)",
   "name": "hollywood",
   "description": "Make applications from plugins.",
-  "version": "0.0.1pre",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "http://github.com/reid/hollywood.git"
